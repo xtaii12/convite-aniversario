@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="video">
+
+<video controls playsinline width="100%">
+
+<source src="assets/video/convite.mp4" type="video/mp4">
+
+</video>
+
+</section>
+
+<section class="conteudo">
+
+<img src="assets/img/convite.png" class="convite-img">
+
+<input
+type="text"
+id="nome"
+class="campo"
+placeholder="Digite seu nome completo">
+
+<button
+class="botao"
+onclick="confirmarPresenca()">
+
+Confirmar Presença
+
+</button>
+
+</section>
+
+<script>
+
+function confirmarPresenca(){
+
+let nome=document.getElementById("nome").value.trim();
+
+if(nome==""){
+
+alert("Digite seu nome.");
+
+return;
+
+}
+
+let mensagem="Olá! Meu nome é "+nome+" e gostaria de confirmar minha presença no aniversário. 🎉";
+
+let url="https://wa.me/5571992941230?text="+encodeURIComponent(mensagem);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+
+</html>
