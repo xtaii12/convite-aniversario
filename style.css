@@ -1,111 +1,115 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html,
 body{
 
-    width:100%;
-    height:100%;
+width:100%;
+height:100%;
 
-    background:#000;
+font-family:Arial,Helvetica,sans-serif;
 
-    font-family:Arial,Helvetica,sans-serif;
+background:#000;
+
+overflow:hidden;
+
+}
+
+.tela{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+padding:20px;
+
+background:#000;
+
+}
+
+.tela.ativa{
+
+display:flex;
 
 }
 
 /* VIDEO */
 
-.video{
+video{
 
-    width:100%;
-    min-height:100vh;
+width:100%;
 
-    display:flex;
+max-width:500px;
 
-    justify-content:center;
+max-height:100%;
 
-    align-items:center;
-
-    background:#000;
+display:block;
 
 }
 
-.video video{
+/* CONVITE */
 
-    width:100%;
+.convite{
 
-    display:block;
+width:100%;
 
-}
+max-width:500px;
 
-/* CONTEÚDO */
+border-radius:18px;
 
-.conteudo{
-
-    width:100%;
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-    background:#000;
+display:block;
 
 }
 
-.convite-img{
-
-    width:100%;
-
-    max-width:500px;
-
-    border-radius:18px;
-
-    display:block;
-
-}
+/* BOTÃO */
 
 .botao{
 
-    display:block;
+display:block;
 
-    width:100%;
+width:100%;
 
-    max-width:500px;
+max-width:500px;
 
-    margin-top:25px;
+margin-top:20px;
 
-    padding:18px;
+padding:18px;
 
-    background:#25D366;
+background:#25D366;
 
-    color:#fff;
+color:#fff;
 
-    text-decoration:none;
+text-decoration:none;
 
-    text-align:center;
+text-align:center;
 
-    font-size:22px;
+font-size:22px;
 
-    font-weight:bold;
+font-weight:bold;
 
-    border-radius:15px;
+border-radius:15px;
 
-    transition:.3s;
+transition:.3s;
 
 }
 
 .botao:hover{
 
-    transform:scale(1.03);
+transform:scale(1.03);
 
 }
