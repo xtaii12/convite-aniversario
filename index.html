@@ -14,7 +14,7 @@
 
 <section class="video">
 
-<video controls playsinline width="100%">
+<video id="videoConvite" controls playsinline width="100%">
 
 <source src="assets/video/convite.mp4" type="video/mp4">
 
@@ -22,47 +22,51 @@
 
 </section>
 
-<section class="conteudo">
+<section class="conteudo" id="conteudo">
 
-<img src="assets/img/convite.png" class="convite-img">
+<img src="assets/img/convite.png" class="convite-img" id="convite">
 
-<input
-type="text"
-id="nome"
-class="campo"
-placeholder="Digite seu nome completo">
-
-<button
+<a
 class="botao"
-onclick="confirmarPresenca()">
+id="botao"
+href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
+target="_blank">
 
 Confirmar Presença
 
-</button>
+</a>
 
 </section>
 
 <script>
 
-function confirmarPresenca(){
+const video=document.getElementById("videoConvite");
 
-let nome=document.getElementById("nome").value.trim();
+const convite=document.getElementById("convite");
 
-if(nome==""){
+const botao=document.getElementById("botao");
 
-alert("Digite seu nome.");
+convite.style.display="none";
+botao.style.display="none";
 
-return;
+video.addEventListener("ended",()=>{
 
-}
+convite.style.display="block";
 
-let mensagem="Olá! Meu nome é "+nome+" e gostaria de confirmar minha presença no aniversário. 🎉";
+setTimeout(()=>{
 
-let url="https://wa.me/5571992941230?text="+encodeURIComponent(mensagem);
+convite.classList.add("mostrar");
 
-window.open(url,"_blank");
+},100);
 
-}
+setTimeout(()=>{
+
+botao.style.display="block";
+botao.classList.add("mostrar");
+
+},1000);
+
+});
 
 </script>
 
