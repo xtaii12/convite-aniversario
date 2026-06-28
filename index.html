@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Convite</title>
 
 <link rel="stylesheet" href="style.css">
@@ -12,59 +14,56 @@
 
 <body>
 
-<section class="video">
+<div id="videoTela" class="video-tela">
 
-<video id="videoConvite" controls playsinline width="100%">
+    <video id="videoConvite" controls playsinline>
 
-<source src="assets/video/convite.mp4" type="video/mp4">
+        <source src="assets/video/convite.mp4" type="video/mp4">
 
-</video>
+    </video>
 
-</section>
+</div>
 
-<section class="conteudo" id="conteudo">
+<div id="conviteTela" class="convite-tela">
 
-<img src="assets/img/convite.png" class="convite-img" id="convite">
+    <img src="assets/img/convite.png" class="convite-img">
 
-<a
-class="botao"
-id="botao"
-href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
-target="_blank">
+    <a
+        href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
+        target="_blank"
+        class="botao"
+        id="botao">
 
-Confirmar Presença
+        Confirmar Presença
 
-</a>
+    </a>
 
-</section>
+</div>
 
 <script>
 
 const video=document.getElementById("videoConvite");
-
-const convite=document.getElementById("convite");
-
+const videoTela=document.getElementById("videoTela");
+const conviteTela=document.getElementById("conviteTela");
 const botao=document.getElementById("botao");
-
-convite.style.display="none";
-botao.style.display="none";
 
 video.addEventListener("ended",()=>{
 
-convite.style.display="block";
+    videoTela.classList.add("sumir");
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-convite.classList.add("mostrar");
+        videoTela.style.display="none";
 
-},100);
+        conviteTela.classList.add("mostrar");
 
-setTimeout(()=>{
+    },600);
 
-botao.style.display="block";
-botao.classList.add("mostrar");
+    setTimeout(()=>{
 
-},1000);
+        botao.classList.add("mostrarBotao");
+
+    },1200);
 
 });
 
