@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +11,10 @@
 
 <body>
 
-<section class="video">
+<section class="video" id="videoSection">
 
     <video id="videoConvite" controls playsinline width="100%">
-
         <source src="assets/video/convite.mp4" type="video/mp4">
-
     </video>
 
 </section>
@@ -40,13 +37,14 @@
 <script>
 
 const video=document.getElementById("videoConvite");
+const videoSection=document.getElementById("videoSection");
 const conteudo=document.getElementById("conteudo");
 
 conteudo.style.display="none";
 
 video.addEventListener("ended",()=>{
 
-    document.querySelector(".video").style.display="none";
+    videoSection.style.display="none";
 
     conteudo.style.display="flex";
 
@@ -55,5 +53,4 @@ video.addEventListener("ended",()=>{
 </script>
 
 </body>
-
 </html>
