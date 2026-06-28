@@ -6,47 +6,46 @@
 <title>Convite</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<section class="video" id="videoSection">
+<div id="videoTela" class="tela ativa">
 
-    <video id="videoConvite" controls playsinline width="100%">
+    <video id="video" controls playsinline>
         <source src="assets/video/convite.mp4" type="video/mp4">
     </video>
 
-</section>
+</div>
 
-<section class="conteudo" id="conteudo">
+<div id="conviteTela" class="tela">
 
-    <img src="assets/img/convite.png" class="convite-img">
+    <img src="assets/img/convite.png" class="convite">
 
     <a
-        class="botao"
         href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
-        target="_blank">
+        target="_blank"
+        class="botao">
 
         Confirmar Presença
 
     </a>
 
-</section>
+</div>
 
 <script>
 
-const video=document.getElementById("videoConvite");
-const videoSection=document.getElementById("videoSection");
-const conteudo=document.getElementById("conteudo");
+const video=document.getElementById("video");
 
-conteudo.style.display="none";
+const videoTela=document.getElementById("videoTela");
+
+const conviteTela=document.getElementById("conviteTela");
 
 video.addEventListener("ended",()=>{
 
-    videoSection.style.display="none";
+    videoTela.classList.remove("ativa");
 
-    conteudo.style.display="flex";
+    conviteTela.classList.add("ativa");
 
 });
 
