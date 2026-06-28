@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Convite</title>
 
 <link rel="stylesheet" href="style.css">
@@ -14,7 +16,7 @@
 
 <section class="video" id="videoSection">
 
-<video id="video" controls playsinline width="100%">
+<video id="videoConvite" controls playsinline width="100%">
 
 <source src="assets/video/convite.mp4" type="video/mp4">
 
@@ -26,7 +28,8 @@
 
 <img src="assets/img/convite.png" class="convite-img">
 
-<a class="botao"
+<a
+class="botao"
 href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
 target="_blank">
 
@@ -38,10 +41,8 @@ Confirmar Presença
 
 <script>
 
-const video=document.getElementById("video");
-
+const video=document.getElementById("videoConvite");
 const videoSection=document.getElementById("videoSection");
-
 const conteudo=document.getElementById("conteudo");
 
 conteudo.style.display="none";
@@ -50,7 +51,7 @@ video.addEventListener("ended",()=>{
 
 videoSection.style.display="none";
 
-conteudo.style.display="block";
+conteudo.style.display="flex";
 
 });
 
