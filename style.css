@@ -4,56 +4,127 @@ padding:0;
 box-sizing:border-box;
 }
 
+html,
 body{
-background:#000;
-font-family:Arial,Helvetica,sans-serif;
-}
 
-.video{
-opacity:0;
-animation:fadeVideo 1s forwards;
-}
-
-.video video{
 width:100%;
-display:block;
+height:100%;
+
+background:#000;
+
+font-family:Arial,Helvetica,sans-serif;
+
+overflow:hidden;
+
 }
 
-.conteudo{
-padding:15px;
+/* ================= VIDEO ================= */
+
+.video-tela{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+background:#000;
+
+transition:.6s;
+
+z-index:2;
+
+}
+
+.video-tela video{
+
+width:100%;
+height:100%;
+
+object-fit:contain;
+
+background:#000;
+
+}
+
+.sumir{
+
+opacity:0;
+
+}
+
+/* ================= CONVITE ================= */
+
+.convite-tela{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#000;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+opacity:0;
+
+transition:.8s;
+
+z-index:1;
+
+}
+
+.mostrar{
+
+opacity:1;
+
 }
 
 .convite-img{
 
 width:100%;
-display:block;
+
+max-width:500px;
+
 border-radius:18px;
 
-opacity:0;
-transform:translateY(40px);
-transition:.8s;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
 
 }
 
+/* ================= BOTÃO ================= */
+
 .botao{
-
-display:block;
-
-width:100%;
-
-padding:18px;
 
 margin-top:25px;
 
-border:none;
+width:100%;
 
-border-radius:15px;
+max-width:500px;
+
+padding:18px;
 
 background:#25D366;
 
-color:white;
-
-text-align:center;
+color:#fff;
 
 text-decoration:none;
 
@@ -61,42 +132,28 @@ font-size:22px;
 
 font-weight:bold;
 
-cursor:pointer;
+text-align:center;
+
+border-radius:15px;
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(25px);
 
-transition:.8s;
+transition:.6s;
 
 }
 
-.mostrar{
+.mostrarBotao{
 
-opacity:1!important;
+opacity:1;
 
-transform:translateY(0)!important;
+transform:translateY(0);
 
 }
 
 .botao:hover{
 
-transform:scale(1.03);
-
-}
-
-@keyframes fadeVideo{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
+transform:translateY(0) scale(1.03);
 
 }
