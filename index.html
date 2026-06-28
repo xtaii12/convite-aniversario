@@ -2,10 +2,8 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Convite</title>
 
 <link rel="stylesheet" href="style.css">
@@ -14,44 +12,43 @@
 
 <body>
 
-<section class="video" id="videoSection">
+<section class="video">
 
-<video id="videoConvite" controls playsinline width="100%">
+    <video id="videoConvite" controls playsinline width="100%">
 
-<source src="assets/video/convite.mp4" type="video/mp4">
+        <source src="assets/video/convite.mp4" type="video/mp4">
 
-</video>
+    </video>
 
 </section>
 
 <section class="conteudo" id="conteudo">
 
-<img src="assets/img/convite.png" class="convite-img">
+    <img src="assets/img/convite.png" class="convite-img">
 
-<a
-class="botao"
-href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
-target="_blank">
+    <a
+        class="botao"
+        href="https://forms.gle/Bq2ZrjzfvrhunjG3A"
+        target="_blank">
 
-Confirmar Presença
+        Confirmar Presença
 
-</a>
+    </a>
 
 </section>
 
 <script>
 
 const video=document.getElementById("videoConvite");
-const videoSection=document.getElementById("videoSection");
 const conteudo=document.getElementById("conteudo");
 
 conteudo.style.display="none";
 
 video.addEventListener("ended",()=>{
 
-videoSection.style.display="none";
+    document.querySelector(".video").style.display="none";
 
-conteudo.style.display="flex";
+    conteudo.style.display="flex";
 
 });
 
